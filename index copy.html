@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>达普韦伯 (DappWeb.cn) - 领先的区块链、AI与可信数据解决方案提供商 | 博客资讯</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        .fade-in { animation: fadeIn 0.8s ease-in-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(15px); } to { opacity: 1; transform: translateY(0); } }
+        .language-dropdown .dropdown-menu { display: none; position: absolute; background-color: white; box-shadow: 0 10px 25px rgba(0,0,0,0.1); z-index: 50; min-width: 120px; border-radius: 8px; padding: 0.5rem 0; margin-top: 0.5rem; right: 0; }
+        .language-dropdown:hover .dropdown-menu, .language-dropdown .dropdown-menu.active { display: block; }
+        .dropdown-menu a { color: #374151; padding: 0.75rem 1rem; text-decoration: none; display: block; text-align: left; font-size: 0.875rem; transition: background-color 0.2s ease, color 0.2s ease; }
+        .dropdown-menu a:hover { background-color: #f3f4f6; color: #4f46e5; }
+        .dropdown-menu a.selected { font-weight: 600; color: #4f46e5; }
+        .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08); }
+        .service-icon-wrapper { display: flex; align-items: center; justify-content: center; height: 3.5rem; width: 3.5rem; border-radius: 0.5rem; background-image: linear-gradient(to right, #4f46e5, #7c3aed); color: white; margin-bottom: 1.25rem; box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3); }
+        .service-icon-wrapper i { font-size: 1.75rem; }
+        .partner-logo { max-height: 45px; width: auto; margin: auto; filter: grayscale(100%); opacity: 0.6; transition: filter 0.3s ease, opacity 0.3s ease; }
+        .partner-logo:hover { filter: grayscale(0%); opacity: 1; }
+        .social-button { display: inline-flex; align-items: center; justify-content: center; padding: 0.75rem 1.25rem; border-radius: 0.5rem; font-weight: 500; transition: transform 0.2s ease, box-shadow 0.2s ease; margin: 0.5rem; min-width: 140px; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .social-button:hover { transform: translateY(-2px); box-shadow: 0 4px 10px rgba(0,0,0,0.15); }
+        .social-button i { margin-right: 0.6rem; font-size: 1.1rem; }
+        .social-twitter { background-color: #1DA1F2; color: white; } .social-twitter:hover { background-color: #0c85d0; }
+        .social-linkedin { background-color: #0A66C2; color: white; } .social-linkedin:hover { background-color: #004182; }
+        .social-wechat { background-color: #07C160; color: white; } .social-wechat:hover { background-color: #06ad56; }
+        .social-telegram { background-color: #2AABEE; color: white; } .social-telegram:hover { background-color: #1798d4; }
+        .blog-card img { aspect-ratio: 16 / 9; object-fit: cover; }
+        .blog-tag { display: inline-block; padding: 0.25rem 0.75rem; font-size: 0.75rem; font-weight: 500; border-radius: 9999px; margin-right: 0.25rem; margin-bottom: 0.5rem; }
+        #why-us, #cooperation, #social-news, #about { background-color: #f9fafb; }
+        #blog-posts { background-color: #f3f4f6; }
+        footer a:hover { color: white; text-decoration: underline; }
+        :target::before { content: ""; display: block; height: 80px; margin-top: -80px; visibility: hidden; }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-xl md:text-2xl font-bold text-indigo-600" data-translate-key="company_brand_name">达普韦伯</a>
+                </div>
+                <div class="hidden md:flex md:items-center md:space-x-3 lg:space-x-4">
+                    <a href="#services" class="nav-link text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium" data-translate-key="nav_services">核心服务</a>
+                    <a href="#portfolio" class="nav-link text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium" data-translate-key="nav_portfolio">成功案例</a>
+                    <a href="#cooperation" class="nav-link text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium" data-translate-key="nav_cooperation">合作平台</a>
+                    <a href="#partners" class="nav-link text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium" data-translate-key="nav_partners">合作伙伴</a>
+                    <a href="/blog/" class="nav-link text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium" data-translate-key="nav_blog">博客资讯</a>
+                    <a href="#social-news" class="nav-link text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium" data-translate-key="nav_follow_us">关注我们</a>
+                    <a href="#about" class="nav-link text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium" data-translate-key="nav_about">关于我们</a>
+                    <a href="#contact" class="nav-link text-gray-600 hover:text-indigo-600 px-3 py-2 rounded-md text-sm font-medium" data-translate-key="nav_contact">联系我们</a>
+                </div>
+                <div class="flex items-center">
+                     <div class="relative language-dropdown mr-2 sm:mr-4">
+                        <button id="language-switcher-button" class="flex items-center text-gray-600 hover:text-indigo-600 px-2 py-2 sm:px-3 rounded-md text-sm font-medium focus:outline-none">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" /> </svg>
+                            <span id="current-lang-text" class="hidden sm:inline">中文</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"> <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" /> </svg>
+                        </button>
+                        <div id="language-dropdown-menu" class="dropdown-menu mt-2 rounded-md shadow-lg ring-1 ring-black ring-opacity-5"> </div>
+                    </div>
+                    <div class="md:hidden">
+                        <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-indigo-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500" aria-controls="mobile-menu" aria-expanded="false">
+                            <span class="sr-only" data-translate-key="sr_open_menu">Open main menu</span>
+                            <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /> </svg>
+                            <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /> </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="md:hidden hidden" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-800 rounded-b-md">
+                <a href="#services" class="mobile-menu-link text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" data-translate-key="nav_services">核心服务</a>
+                <a href="#portfolio" class="mobile-menu-link text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" data-translate-key="nav_portfolio">成功案例</a>
+                <a href="#cooperation" class="mobile-menu-link text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" data-translate-key="nav_cooperation">合作平台</a>
+                <a href="#partners" class="mobile-menu-link text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" data-translate-key="nav_partners">合作伙伴</a>
+                <a href="/blog/" class="mobile-menu-link text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" data-translate-key="nav_blog">博客资讯</a>
+                <a href="#social-news" class="mobile-menu-link text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" data-translate-key="nav_follow_us">关注我们</a>
+                <a href="#about" class="mobile-menu-link text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" data-translate-key="nav_about">关于我们</a>
+                <a href="#contact" class="mobile-menu-link text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium" data-translate-key="nav_contact">联系我们</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-gradient-to-br from-indigo-600 to-purple-700 text-white fade-in">
+        <div class="max-w-7xl mx-auto py-20 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl md:text-6xl" data-translate-key="hero_title">
+                构建下一代区块链、AI 与可信数据应用
+            </h1>
+            <p class="mt-6 max-w-xl sm:max-w-2xl lg:max-w-3xl mx-auto text-lg sm:text-xl text-indigo-100">
+                <span data-translate-key="company_brand_name">达普韦伯</span> - <span data-translate-key="hero_subtitle_part2">您值得信赖的全球技术伙伴，总部位于西安，提供交易所、DApp、GameFi、AI 服务、DeFi、NFT 市场、公链、Layer 2、钱包及可信数据空间等专业定制开发服务。探索我们的<a href="/blog/" class="text-indigo-200 hover:text-white underline font-medium">博客资讯</a>获取最新行业洞察。</span>
+            </p>
+            <div class="mt-10 sm:mt-12 flex flex-col sm:flex-row sm:justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="#contact" class="inline-block bg-white text-indigo-600 font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-gray-100 transition duration-300 transform hover:-translate-y-1" data-translate-key="hero_cta1">
+                    获取专属方案
+                </a>
+                <a href="#services" class="inline-block bg-indigo-500 text-white font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-indigo-400 transition duration-300 transform hover:-translate-y-1" data-translate-key="hero_cta2">
+                    了解更多服务
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="services" class="py-16 sm:py-20 lg:py-24 bg-white">
+         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 lg:mb-16">
+                <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" data-translate-key="services_title">我们的核心服务</h2>
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto" data-translate-key="services_subtitle">提供全方位的区块链、Web3、AI 及可信数据软件开发与定制服务</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+                 <div class="bg-gray-50 p-6 rounded-xl shadow-sm card-hover"> <div class="service-icon-wrapper"> <i class="fas fa-exchange-alt"></i> </div> <h3 class="text-xl font-semibold mb-2" data-translate-key="service_exchange_title">交易所软件开发</h3> <p class="text-gray-600" data-translate-key="service_exchange_desc">安全、高效、可扩展的中心化及去中心化 (DEX) 交易所系统定制。</p> </div>
+                 <div class="bg-gray-50 p-6 rounded-xl shadow-sm card-hover"> <div class="service-icon-wrapper"> <i class="fas fa-cubes"></i> </div> <h3 class="text-xl font-semibold mb-2" data-translate-key="service_dapp_title">DApp 开发</h3> <p class="text-gray-600" data-translate-key="service_dapp_desc">基于主流公链 (ETH, BSC, Solana, Kinachain 等) 的去中心化应用开发。</p> </div>
+                 <div class="bg-gray-50 p-6 rounded-xl shadow-sm card-hover"> <div class="service-icon-wrapper"> <i class="fas fa-gamepad"></i> </div> <h3 class="text-xl font-semibold mb-2" data-translate-key="service_gamefi_title">GameFi 开发</h3> <p class="text-gray-600" data-translate-key="service_gamefi_desc">融合游戏与金融，打造引人入胜的 Play-to-Earn 及各类链游。</p> </div>
+                 <div class="bg-gray-50 p-6 rounded-xl shadow-sm card-hover"> <div class="service-icon-wrapper"> <i class="fas fa-chart-line"></i> </div> <h3 class="text-xl font-semibold mb-2" data-translate-key="service_quant_title">量化交易系统</h3> <p class="text-gray-600" data-translate-key="service_quant_desc">开发定制化的数字资产量化交易策略、机器人与跟单系统。</p> </div>
+                 <div class="bg-gray-50 p-6 rounded-xl shadow-sm card-hover"> <div class="service-icon-wrapper"> <i class="fas fa-coins"></i> </div> <h3 class="text-xl font-semibold mb-2" data-translate-key="service_defi_title">DeFi 解决方案</h3> <p class="text-gray-600" data-translate-key="service_defi_desc">构建去中心化金融协议，如借贷、DEX、流动性挖矿、RWA 等。</p> </div>
+                 <div class="bg-gray-50 p-6 rounded-xl shadow-sm card-hover"> <div class="service-icon-wrapper"> <i class="fas fa-store"></i> </div> <h3 class="text-xl font-semibold mb-2" data-translate-key="service_nft_title">NFT 市场开发</h3> <p class="text-gray-600" data-translate-key="service_nft_desc">开发功能丰富的 NFT 发行、交易、拍卖、展示平台 (基于 ERC721/1155)。</p> </div>
+                 <div class="bg-gray-50 p-6 rounded-xl shadow-sm card-hover"> <div class="service-icon-wrapper"> <i class="fas fa-link"></i> </div> <h3 class="text-xl font-semibold mb-2" data-translate-key="service_chain_title">公链与联盟链</h3> <p class="text-gray-600" data-translate-key="service_chain_desc">提供公链节点部署、联盟链 (如自研 Kinachain) 搭建与运维服务。</p> </div>
+                 <div class="bg-gray-50 p-6 rounded-xl shadow-sm card-hover"> <div class="service-icon-wrapper"> <i class="fas fa-layer-group"></i> </div> <h3 class="text-xl font-semibold mb-2" data-translate-key="service_layer2_title">Layer 2 解决方案</h3> <p class="text-gray-600" data-translate-key="service_layer2_desc">基于 Rollups (Optimistic, ZK) 等技术提供扩容方案设计与开发。</p> </div>
+                 <div class="bg-gray-50 p-6 rounded-xl shadow-sm card-hover"> <div class="service-icon-wrapper"> <i class="fas fa-wallet"></i> </div> <h3 class="text-xl font-semibold mb-2" data-translate-key="service_wallet_title">数字钱包开发</h3> <p class="text-gray-600" data-translate-key="service_wallet_desc">开发安全易用的 Web3 钱包 (浏览器插件、移动 App)，支持多链。</p> </div>
+                 <div class="bg-gray-50 p-6 rounded-xl shadow-sm card-hover"> <div class="service-icon-wrapper"> <i class="fas fa-shield-alt"></i> </div> <h3 class="text-xl font-semibold mb-2" data-translate-key="service_data_space_title">可信数据空间</h3> <p class="text-gray-600" data-translate-key="service_data_space_desc">构建基于隐私计算和区块链技术的数据安全共享与协作环境。</p> </div>
+                 <div class="bg-gray-50 p-6 rounded-xl shadow-sm card-hover"> <div class="service-icon-wrapper"> <i class="fas fa-robot"></i> </div> <h3 class="text-xl font-semibold mb-2" data-translate-key="service_ai_title">人工智能服务</h3> <p class="text-gray-600" data-translate-key="service_ai_desc">提供基于可信数据和 Web3 架构的 AI 模型训练、部署与应用服务，专注个性化、强隐私 (如独立记忆体) 和可解释的智能解决方案。</p> </div>
+                 <div class="bg-gray-50 p-6 rounded-xl shadow-sm card-hover"> <div class="service-icon-wrapper"> <i class="fas fa-database"></i> </div> <h3 class="text-xl font-semibold mb-2" data-translate-key="service_data_trading_title">数据交易系统</h3> <p class="text-gray-600" data-translate-key="service_data_trading_desc">开发安全合规的数据要素流通平台 (如 \"数易通\")，集成 AI 智能匹配与评估。</p> </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-us" class="py-16 sm:py-20 lg:py-24 bg-gray-50">
+         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center lg:text-center mb-12 lg:mb-16">
+                 <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase" data-translate-key="why_us_badge">我们的优势</h2>
+                 <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                     为什么选择<span data-translate-key="company_brand_name">达普韦伯</span>？
+                 </p>
+                 <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+                     我们立足西安，服务全球，致力于提供顶尖的区块链、AI 与可信数据技术解决方案。
+                 </p>
+            </div>
+            <div class="mt-10">
+                <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-x-8 md:gap-y-12">
+                     <div class="relative"> <dt> <div class="absolute flex items-center justify-center h-12 w-12 rounded-lg bg-indigo-500 text-white shadow-lg"> <i class="fas fa-globe-americas text-xl"></i> </div> <p class="ml-16 text-lg leading-6 font-medium text-gray-900" data-translate-key="advantage_global_title">全球化服务能力</p> </dt> <dd class="mt-2 ml-16 text-base text-gray-500" data-translate-key="advantage_global_desc"> 服务覆盖全球，支持中、英、日、韩多语言沟通与交付，深刻理解不同市场需求。 </dd> </div>
+                     <div class="relative"> <dt> <div class="absolute flex items-center justify-center h-12 w-12 rounded-lg bg-indigo-500 text-white shadow-lg"> <i class="fas fa-users-cog text-xl"></i> </div> <p class="ml-16 text-lg leading-6 font-medium text-gray-900" data-translate-key="advantage_team_title">专业技术团队</p> </dt> <dd class="mt-2 ml-16 text-base text-gray-500" data-translate-key="advantage_team_desc"> 拥有经验丰富的区块链工程师、AI 专家、产品经理和设计师，精通各类前沿技术栈。 </dd> </div>
+                     <div class="relative"> <dt> <div class="absolute flex items-center justify-center h-12 w-12 rounded-lg bg-indigo-500 text-white shadow-lg"> <i class="fas fa-drafting-compass text-xl"></i> </div> <p class="ml-16 text-lg leading-6 font-medium text-gray-900" data-translate-key="advantage_custom_title">高度定制化方案</p> </dt> <dd class="mt-2 ml-16 text-base text-gray-500" data-translate-key="advantage_custom_desc"> 根据您的具体业务场景和目标，量身定制最合适的区块链、Web3 及 AI 解决方案。 </dd> </div>
+                     <div class="relative"> <dt> <div class="absolute flex items-center justify-center h-12 w-12 rounded-lg bg-indigo-500 text-white shadow-lg"> <i class="fas fa-headset text-xl"></i> </div> <p class="ml-16 text-lg leading-6 font-medium text-gray-900" data-translate-key="advantage_support_title">全流程支持</p> </dt> <dd class="mt-2 ml-16 text-base text-gray-500" data-translate-key="advantage_support_desc"> 从需求分析、方案设计、技术开发到测试部署、上线运维，提供端到端的专业服务。 </dd> </div>
+                     <div class="relative"> <dt> <div class="absolute flex items-center justify-center h-12 w-12 rounded-lg bg-indigo-500 text-white shadow-lg"> <i class="fas fa-cogs text-xl"></i> </div> <p class="ml-16 text-lg leading-6 font-medium text-gray-900" data-translate-key="advantage_tech_title">自主核心技术</p> </dt> <dd class="mt-2 ml-16 text-base text-gray-500" data-translate-key="advantage_tech_desc"> 拥有自主研发的基纳链 (Kinachain) 联盟链、元话数字资产 SaaS 系统等核心技术资产。 </dd> </div>
+                     <div class="relative"> <dt> <div class="absolute flex items-center justify-center h-12 w-12 rounded-lg bg-indigo-500 text-white shadow-lg"> <i class="fas fa-map-marker-alt text-xl"></i> </div> <p class="ml-16 text-lg leading-6 font-medium text-gray-900" data-translate-key="advantage_location_title">立足创新高地</p> </dt> <dd class="mt-2 ml-16 text-base text-gray-500" data-translate-key="advantage_location_desc"> 总部位于中国西安，充分利用区域科技创新优势，辐射全球市场。 </dd> </div>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-16 sm:py-20 lg:py-24 bg-white">
+         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 lg:mb-16">
+                <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" data-translate-key="portfolio_title">成功案例</h2>
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto" data-translate-key="portfolio_subtitle">我们与众多客户共同实现的卓越成果 (部分示例)</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+                 <div class="group relative bg-gray-50 rounded-lg overflow-hidden shadow-sm card-hover"> <img src="https://placehold.co/600x400/e2e8f0/cbd5e0?text=山东文保项目" alt="[山东文保文物修复技术有限公司项目图片]" class="w-full h-48 object-cover group-hover:opacity-75 transition-opacity duration-300" onerror="this.onerror=null; this.src='https://placehold.co/600x400/e2e8f0/cbd5e0?text=图片加载失败';"> <div class="p-5"> <h3 class="text-lg font-semibold mb-1" data-translate-key="case_shandong_title">山东文保 - 文博数字资产平台</h3> <p class="text-sm text-gray-600" data-translate-key="case_shandong_type">服务类型：联盟链 (Kinachain) 应用</p> </div> <a href="#" class="absolute inset-0" aria-label="查看项目详情"></a> </div>
+                 <div class="group relative bg-gray-50 rounded-lg overflow-hidden shadow-sm card-hover"> <img src="https://placehold.co/600x400/e2e8f0/cbd5e0?text=宫匠数藏项目" alt="[宫匠数藏项目图片]" class="w-full h-48 object-cover group-hover:opacity-75 transition-opacity duration-300" onerror="this.onerror=null; this.src='https://placehold.co/600x400/e2e8f0/cbd5e0?text=图片加载失败';"> <div class="p-5"> <h3 class="text-lg font-semibold mb-1" data-translate-key="case_gongjiang_title">宫匠数藏 - 数字资产交易平台</h3> <p class="text-sm text-gray-600" data-translate-key="case_gongjiang_type">服务类型：NFT Marketplace 开发</p> </div> <a href="#" class="absolute inset-0" aria-label="查看项目详情"></a> </div>
+                 <div class="group relative bg-gray-50 rounded-lg overflow-hidden shadow-sm card-hover"> <img src="https://placehold.co/600x400/e2e8f0/cbd5e0?text=省广数藏项目" alt="[省广数藏项目图片]" class="w-full h-48 object-cover group-hover:opacity-75 transition-opacity duration-300" onerror="this.onerror=null; this.src='https://placehold.co/600x400/e2e8f0/cbd5e0?text=图片加载失败';"> <div class="p-5"> <h3 class="text-lg font-semibold mb-1" data-translate-key="case_shengguang_title">省广数藏 - 平台及联盟链服务</h3> <p class="text-sm text-gray-600" data-translate-key="case_shengguang_type">服务类型：NFT Marketplace + 联盟链</p> </div> <a href="#" class="absolute inset-0" aria-label="查看项目详情"></a> </div>
+            </div>
+            <div class="text-center mt-12 lg:mt-16">
+                 <a href="#" class="text-indigo-600 hover:text-indigo-800 font-semibold transition-colors duration-300" data-translate-key="portfolio_view_all">查看更多案例 &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+     <section id="cooperation" class="py-16 sm:py-20 lg:py-24 bg-gray-50">
+         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 lg:mb-16">
+                <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" data-translate-key="cooperation_title">合作运营平台</h2>
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto" data-translate-key="cooperation_subtitle">我们深度参与运营的前沿 Web3.0 与 AI 应用</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
+                 <div class="bg-white p-8 rounded-xl shadow-md card-hover"> <img src="https://placehold.co/200x80/e2e8f0/cbd5e0?text=墨山域Logo" alt="[墨山域元空间 Logo 图片]" class="h-12 mx-auto mb-6" onerror="this.onerror=null; this.src='https://placehold.co/200x80/e2e8f0/cbd5e0?text=Logo加载失败';"> <h3 class="text-xl font-semibold mb-3 text-center" data-translate-key="coop_moshanspace_title">墨山域元空间</h3> <p class="text-gray-600 text-center mb-4" data-translate-key="coop_moshanspace_desc">全球首款基于 Web3.0 的个人数据 AI 处理器与分布式存储服务。</p> <p class="text-gray-700 text-sm mt-2"><strong class="font-medium" data-translate-key="coop_highlights">核心亮点:</strong> <span data-translate-key="coop_moshanspace_highlights">Web3.0 分布式存储, 小墨 AI (个性化、强隐私), 参与标准制定。</span></p> <p class="text-gray-700 text-sm mt-1"><strong class="font-medium" data-translate-key="coop_role">达普韦伯角色:</strong> <span data-translate-key="coop_moshanspace_role">提供核心 Web3.0 底层技术与 AI 能力支持。</span></p> <div class="text-center mt-6"> <a href="https://www.moshanspace.com" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 font-semibold transition-colors duration-300" data-translate-key="coop_visit_website">访问官网 &rarr;</a> </div> </div>
+                 <div class="bg-white p-8 rounded-xl shadow-md card-hover"> <img src="https://placehold.co/200x80/e2e8f0/cbd5e0?text=元话RWA Logo" alt="[元话 RWA Logo 图片]" class="h-12 mx-auto mb-6" onerror="this.onerror=null; this.src='https://placehold.co/200x80/e2e8f0/cbd5e0?text=Logo加载失败';"> <h3 class="text-xl font-semibold mb-3 text-center" data-translate-key="coop_metakina_title">元话 RWA</h3> <p class="text-gray-600 text-center mb-4" data-translate-key="coop_metakina_desc">构建现实资产与数字金融的合规桥梁，提供机构级 RWA 代币化一站式解决方案。</p> <p class="text-gray-700 text-sm mt-2"><strong class="font-medium" data-translate-key="coop_highlights">核心服务:</strong> <span data-translate-key="coop_metakina_services">端到端 RWA 方案, 合规跨境专家, 多元资产支持。</span></p> <p class="text-gray-700 text-sm mt-1"><strong class="font-medium" data-translate-key="coop_role">达普韦伯角色:</strong> <span data-translate-key="coop_metakina_role">核心技术研发伙伴与服务商。</span></p> <div class="text-center mt-6"> <a href="https://www.metakina.com" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:text-indigo-800 font-semibold transition-colors duration-300" data-translate-key="coop_visit_website">访问官网 &rarr;</a> </div> </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="partners" class="py-16 sm:py-20 lg:py-24 bg-white">
+         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 lg:mb-16">
+                <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" data-translate-key="partners_title">技术与生态伙伴</h2>
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto" data-translate-key="partners_subtitle">携手全球领先的 Web3 与技术平台，共建繁荣生态</p>
+            </div>
+            <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-x-8 gap-y-10 items-center">
+                 <div class="text-center"> <img src="https://placehold.co/150x50/e2e8f0/cbd5e0?text=Ethereum" alt="[Ethereum Logo 图片]" class="partner-logo"> </div>
+                 <div class="text-center"> <img src="https://placehold.co/150x50/e2e8f0/cbd5e0?text=Solana" alt="[Solana Logo 图片]" class="partner-logo"> </div>
+                 <div class="text-center"> <img src="https://placehold.co/150x50/e2e8f0/cbd5e0?text=Polygon" alt="[Polygon Logo 图片]" class="partner-logo"> </div>
+                 <div class="text-center"> <img src="https://placehold.co/150x50/e2e8f0/cbd5e0?text=Binance" alt="[Binance Logo 图片]" class="partner-logo"> </div>
+                 <div class="text-center"> <img src="https://placehold.co/150x50/e2e8f0/cbd5e0?text=MetaMask" alt="[MetaMask Logo 图片]" class="partner-logo"> </div>
+                 <div class="text-center"> <img src="https://placehold.co/150x50/e2e8f0/cbd5e0?text=Chainlink" alt="[Chainlink Logo 图片]" class="partner-logo"> </div>
+                 <div class="text-center"> <img src="https://placehold.co/150x50/e2e8f0/cbd5e0?text=OpenSea" alt="[OpenSea Logo 图片]" class="partner-logo"> </div>
+                 <div class="text-center"> <img src="https://placehold.co/150x50/e2e8f0/cbd5e0?text=IPFS" alt="[IPFS Logo 图片]" class="partner-logo"> </div>
+                 <div class="text-center"> <img src="https://placehold.co/150x50/e2e8f0/cbd5e0?text=thirdweb" alt="[thirdweb Logo 图片]" class="partner-logo"> </div>
+                 <div class="text-center"> <img src="https://placehold.co/150x50/e2e8f0/cbd5e0?text=Kinachain" alt="[Kinachain Logo 图片]" class="partner-logo"> </div>
+                 <div class="text-center"> <img src="https://placehold.co/150x50/e2e8f0/cbd5e0?text=AWS" alt="[AWS Logo 图片]" class="partner-logo"> </div>
+                 <div class="text-center"> <img src="https://placehold.co/150x50/e2e8f0/cbd5e0?text=Alibaba Cloud" alt="[阿里云 Logo 图片]" class="partner-logo"> </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog-posts" class="py-16 sm:py-20 lg:py-24 bg-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 lg:mb-16">
+                <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" data-translate-key="blog_title">博客资讯 & 深度洞察</h2>
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto" data-translate-key="blog_subtitle">来自达普韦伯团队的前沿分析与技术分享 (内容源自 <a href="/blog/" class="text-indigo-600 hover:text-indigo-800 font-medium">我们的博客</a>)</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+                 <div class="blog-card bg-white rounded-lg shadow-md overflow-hidden card-hover flex flex-col"> <a href="/blog/layer-2-trends/" aria-label="阅读关于 Layer 2 扩容方案最新进展与未来趋势的文章"> <img src="https://placehold.co/600x338/818cf8/ffffff?text=区块链技术" alt="[区块链技术文章图片]" class="w-full" onerror="this.onerror=null; this.src='https://placehold.co/600x338/e2e8f0/cbd5e0?text=图片加载失败';"> </a> <div class="p-6 flex flex-col flex-grow"> <div> <span class="blog-tag bg-indigo-100 text-indigo-800" data-translate-key="tag_blockchain">区块链</span> <span class="blog-tag bg-gray-100 text-gray-800" data-translate-key="tag_tech">技术分析</span> </div> <h3 class="text-xl font-semibold mb-2 text-gray-900 hover:text-indigo-600 transition-colors"> <a href="/blog/layer-2-trends/" data-translate-key="blog1_title">Layer 2 扩容方案最新进展与未来趋势</a> </h3> <p class="text-sm text-gray-500 mb-3"><i class="far fa-calendar-alt mr-1"></i> 2025年5月1日</p> <p class="text-gray-700 text-sm mb-4 flex-grow" data-translate-key="blog1_excerpt">深入探讨 ZK-Rollups 与 Optimistic Rollups 的技术演进、应用场景及面临的挑战...</p> <a href="/blog/layer-2-trends/" class="text-indigo-600 hover:text-indigo-800 font-semibold self-start" data-translate-key="read_more">阅读全文 &rarr;</a> </div> </div>
+                 <div class="blog-card bg-white rounded-lg shadow-md overflow-hidden card-hover flex flex-col"> <a href="/blog/web3-ai-integration/" aria-label="阅读关于 Web3 与 AI 融合的文章"> <img src="https://placehold.co/600x338/a78bfa/ffffff?text=人工智能+AI" alt="[人工智能与Web3文章图片]" class="w-full" onerror="this.onerror=null; this.src='https://placehold.co/600x338/e2e8f0/cbd5e0?text=图片加载失败';"> </a> <div class="p-6 flex flex-col flex-grow"> <div> <span class="blog-tag bg-purple-100 text-purple-800" data-translate-key="tag_ai">人工智能</span> <span class="blog-tag bg-gray-100 text-gray-800" data-translate-key="tag_web3">Web3</span> </div> <h3 class="text-xl font-semibold mb-2 text-gray-900 hover:text-indigo-600 transition-colors"> <a href="/blog/web3-ai-integration/" data-translate-key="blog2_title">Web3 与 AI 融合：构建可信智能应用的机遇</a> </h3> <p class="text-sm text-gray-500 mb-3"><i class="far fa-calendar-alt mr-1"></i> 2025年4月25日</p> <p class="text-gray-700 text-sm mb-4 flex-grow" data-translate-key="blog2_excerpt">分析区块链如何为 AI 提供可信数据源和计算环境，以及 AI 如何增强 DApp 功能...</p> <a href="/blog/web3-ai-integration/" class="text-indigo-600 hover:text-indigo-800 font-semibold self-start" data-translate-key="read_more">阅读全文 &rarr;</a> </div> </div>
+                 <div class="blog-card bg-white rounded-lg shadow-md overflow-hidden card-hover flex flex-col"> <a href="/blog/rwa-tokenization-defi/" aria-label="阅读关于 RWA 代币化的文章"> <img src="https://placehold.co/600x338/f87171/ffffff?text=DeFi+RWA" alt="[DeFi 与 RWA 文章图片]" class="w-full" onerror="this.onerror=null; this.src='https://placehold.co/600x338/e2e8f0/cbd5e0?text=图片加载失败';"> </a> <div class="p-6 flex flex-col flex-grow"> <div> <span class="blog-tag bg-red-100 text-red-800" data-translate-key="tag_defi">DeFi</span> <span class="blog-tag bg-yellow-100 text-yellow-800" data-translate-key="tag_rwa">RWA</span> </div> <h3 class="text-xl font-semibold mb-2 text-gray-900 hover:text-indigo-600 transition-colors"> <a href="/blog/rwa-tokenization-defi/" data-translate-key="blog3_title">RWA 代币化：连接现实世界资产与 DeFi 的桥梁</a> </h3> <p class="text-sm text-gray-500 mb-3"><i class="far fa-calendar-alt mr-1"></i> 2025年4月20日</p> <p class="text-gray-700 text-sm mb-4 flex-grow" data-translate-key="blog3_excerpt">探讨房地产、债券等真实世界资产如何通过代币化进入 DeFi 生态，释放流动性...</p> <a href="/blog/rwa-tokenization-defi/" class="text-indigo-600 hover:text-indigo-800 font-semibold self-start" data-translate-key="read_more">阅读全文 &rarr;</a> </div> </div>
+            </div>
+             <div class="text-center mt-12 lg:mt-16">
+                 <a href="/blog/" class="inline-block bg-indigo-600 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-indigo-700 transition duration-300 transform hover:-translate-y-1" data-translate-key="blog_view_all">
+                    访问博客获取更多资讯
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="social-news" class="py-16 sm:py-20 lg:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div class="text-center md:text-left">
+                    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-4" data-translate-key="social_title">关注我们 & 公司要闻</h2>
+                    <p class="text-lg text-gray-600 mb-8" data-translate-key="social_subtitle">
+                        在社交媒体上关注达普韦伯，获取最新的公司公告、活动信息、技术更新。重要新闻也会发布在<a href="/blog/category/news/" class="text-indigo-600 hover:text-indigo-800 font-medium">博客的公司新闻</a>栏目。
+                    </p>
+                    <div class="flex flex-wrap justify-center md:justify-start -m-2">
+                         <a href="#" class="social-button social-twitter" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Twitter"> <i class="fab fa-twitter"></i> Twitter </a>
+                         <a href="#" class="social-button social-linkedin" target="_blank" rel="noopener noreferrer" aria-label="Follow us on LinkedIn"> <i class="fab fa-linkedin-in"></i> LinkedIn </a>
+                         <a href="#" class="social-button social-wechat" target="_blank" rel="noopener noreferrer" aria-label="Follow us on WeChat"> <i class="fab fa-weixin"></i> <span data-translate-key="social_wechat">微信公众号</span> </a>
+                         <a href="#" class="social-button social-telegram" target="_blank" rel="noopener noreferrer" aria-label="Join us on Telegram"> <i class="fab fa-telegram-plane"></i> Telegram </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-5 text-center md:text-left" data-translate-key="news_title">近期要闻</h3>
+                    <div class="space-y-5">
+                         <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"> <a href="/blog/company-award-2025/" class="block group"> <h4 class="font-semibold text-indigo-600 mb-1 group-hover:text-indigo-700 transition-colors" data-translate-key="news1_title">达普韦伯荣获“年度区块链创新企业”奖项</h4> <p class="text-sm text-gray-500 mb-2"><i class="far fa-calendar-alt mr-1"></i> 2025年5月2日</p> <p class="text-gray-700 text-sm" data-translate-key="news1_excerpt">在 XXX 峰会上，达普韦伯凭借其在可信数据和 AI 领域的突破获得认可...</p> </a> </div>
+                         <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"> <a href="/blog/kinachain-v2-release/" class="block group"> <h4 class="font-semibold text-indigo-600 mb-1 group-hover:text-indigo-700 transition-colors" data-translate-key="news2_title">基纳链 (Kinachain) 完成新一轮战略升级</h4> <p class="text-sm text-gray-500 mb-2"><i class="far fa-calendar-alt mr-1"></i> 2025年4月28日</p> <p class="text-gray-700 text-sm" data-translate-key="news2_excerpt">本次升级显著提升了 TPS 并优化了对 AI 驱动型智能合约的支持...</p> </a> </div>
+                         <div class="text-center md:text-left mt-8"> <a href="/blog/category/news/" class="text-indigo-600 hover:text-indigo-800 font-semibold transition-colors duration-300" data-translate-key="news_view_all">查看所有公司新闻 &rarr;</a> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 sm:py-20 lg:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 lg:mb-16">
+                 <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl" data-translate-key="about_title">关于我们</h2>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                 <div class="text-left space-y-6">
+                     <p class="text-lg text-gray-600" data-translate-key="about_intro"> 西安达普韦伯网络科技有限责任公司 (达普韦伯) 是一家领先的区块链技术服务专家、可信数据空间构建者、数据交易系统开发者及人工智能应用服务商。我们立足于中国西安这一科技创新高地，面向全球客户提供服务。 </p>
+                     <p class="text-lg text-gray-600" data-translate-key="about_mission_vision"> 我们的使命是“<strong class="font-semibold text-indigo-600">技术重塑信任，数据赋能未来</strong>”，致力于成为全球领先的可信数据流通基础设施与服务提供商。我们坚守“<strong class="font-semibold">诚信、创新、协作、共赢</strong>”的核心价值观，驱动每一次合作与创新。 </p>
+                     <p class="text-lg text-gray-600" data-translate-key="about_experience"> 凭借丰富的行业经验，我们已累计服务国内外客户超过 200 家。我们自主研发并运营专注于数字资产领域的<strong class="font-semibold">基纳链 (Kinachain) 联盟链</strong>，并合作运营“墨山域元空间”、“元话 RWA”等前沿 Web3.0 应用，在 DApp 开发、可信数据、人工智能应用及数字资产解决方案领域积累了深厚的实践经验。 </p>
+                     <p class="text-lg text-gray-600" data-translate-key="about_commitment"> <span data-translate-key="company_brand_name">达普韦伯</span>致力于通过先进的技术和专业的服务，帮助客户在 Web3 和数据要素化的时代浪潮中把握机遇，实现价值增长。 </p>
+                 </div>
+                 <div class="flex justify-center lg:justify-end">
+                     <img src="https://placehold.co/600x450/e0e7ff/4f46e5?text=关于我们插图" alt="[关于达普韦伯的插图或图片]" class="rounded-lg shadow-xl object-cover w-full max-w-md lg:max-w-none" onerror="this.onerror=null; this.src='https://placehold.co/600x450/e2e8f0/cbd5e0?text=图片加载失败';" >
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-indigo-700 to-purple-800 text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-extrabold sm:text-4xl" data-translate-key="contact_title">准备好启动您的区块链或 AI 项目了吗？</h2>
+            <p class="mt-4 sm:mt-5 text-lg sm:text-xl text-indigo-100" data-translate-key="contact_subtitle">
+                联系我们的专家团队，获取免费咨询和项目评估，共同探索数据要素、数字资产与人工智能的无限可能！
+            </p>
+            <div class="mt-8 sm:mt-10">
+                <a href="mailto:contact@dappweb.cn" class="inline-flex items-center justify-center bg-white text-indigo-700 font-semibold px-8 py-3 rounded-lg shadow-lg hover:bg-gray-100 transition duration-300 transform hover:-translate-y-1">
+                    <i class="far fa-envelope mr-2"></i> <span data-translate-key="contact_cta">立即联系我们 (contact@dappweb.cn)</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400">
+        <div class="max-w-7xl mx-auto py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 lg:gap-10 mb-10">
+                 <div> <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase" data-translate-key="footer_services_title">核心服务</h3> <ul class="mt-4 space-y-3"> <li><a href="#services" class="text-base hover:text-white" data-translate-key="footer_service_exchange">交易所开发</a></li> <li><a href="#services" class="text-base hover:text-white" data-translate-key="footer_service_dapp">DApp 开发</a></li> <li><a href="#services" class="text-base hover:text-white" data-translate-key="footer_service_gamefi">GameFi 开发</a></li> <li><a href="#services" class="text-base hover:text-white" data-translate-key="footer_service_nft">NFT 市场</a></li> <li><a href="#services" class="text-base hover:text-white" data-translate-key="footer_service_chain">公链/联盟链</a></li> <li><a href="#services" class="text-base hover:text-white" data-translate-key="footer_service_layer2">Layer 2 方案</a></li> <li><a href="#services" class="text-base hover:text-white" data-translate-key="footer_service_wallet">数字钱包</a></li> <li><a href="#services" class="text-base hover:text-white" data-translate-key="footer_service_data_space">可信数据空间</a></li> <li><a href="#services" class="text-base hover:text-white" data-translate-key="footer_service_ai">AI 服务</a></li> </ul> </div>
+                 <div> <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase" data-translate-key="footer_company_title">公司信息</h3> <ul class="mt-4 space-y-3"> <li><a href="#about" class="text-base hover:text-white" data-translate-key="footer_about">关于达普韦伯</a></li> <li><a href="/blog/" class="text-base hover:text-white" data-translate-key="footer_blog">博客资讯</a></li> <li><a href="/blog/category/news/" class="text-base hover:text-white" data-translate-key="footer_news">公司新闻</a></li> <li><a href="#" class="text-base hover:text-white" data-translate-key="footer_careers">加入我们</a></li> <li><a href="#contact" class="text-base hover:text-white" data-translate-key="footer_contact">联系方式</a></li> <li><a href="https://www.kinachain.com" target="_blank" rel="noopener noreferrer" class="text-base hover:text-white">基纳链 (Kinachain)</a></li> <li><a href="https://www.metakina.com" target="_blank" rel="noopener noreferrer" class="text-base hover:text-white">元话 RWA</a></li> <li><a href="https://www.moshanspace.com" target="_blank" rel="noopener noreferrer" class="text-base hover:text-white">墨山域元空间</a></li> </ul> </div>
+                 <div> <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase" data-translate-key="footer_resources_title">资源与支持</h3> <ul class="mt-4 space-y-3"> <li><a href="#" class="text-base hover:text-white" data-translate-key="footer_help">帮助中心</a></li> <li><a href="#" class="text-base hover:text-white" data-translate-key="footer_privacy">隐私政策</a></li> <li><a href="#" class="text-base hover:text-white" data-translate-key="footer_terms">服务条款</a></li> </ul> </div>
+                 <div> <h3 class="text-sm font-semibold text-gray-300 tracking-wider uppercase" data-translate-key="footer_follow_title">关注我们</h3> <div class="mt-4 flex space-x-5"> <a href="#" class="text-gray-400 hover:text-white" aria-label="Twitter"> <span class="sr-only">Twitter</span> <i class="fab fa-twitter text-2xl"></i> </a> <a href="#" class="text-gray-400 hover:text-white" aria-label="LinkedIn"> <span class="sr-only">LinkedIn</span> <i class="fab fa-linkedin-in text-2xl"></i> </a> <a href="#" class="text-gray-400 hover:text-white" aria-label="WeChat"> <span class="sr-only">微信公众号</span> <i class="fab fa-weixin text-2xl"></i> </a> <a href="#" class="text-gray-400 hover:text-white" aria-label="Telegram"> <span class="sr-only">Telegram</span> <i class="fab fa-telegram-plane text-2xl"></i> </a> </div> <div class="mt-6"> <p class="text-base" data-translate-key="footer_company_name">西安达普韦伯网络科技有限责任公司</p> <p class="text-base" data-translate-key="footer_address">总部：中国·西安</p> <p class="text-base mt-2"><i class="far fa-envelope mr-2"></i> <a href="mailto:contact@dappweb.cn" class="hover:text-white">contact@dappweb.cn</a></p> <p class="text-base"><i class="fas fa-phone-alt mr-2"></i> <a href="tel:+8617709224992" class="hover:text-white">+86 177 0922 4992</a></p> </div> </div>
+            </div>
+            <div class="mt-10 border-t border-gray-700 pt-10 text-center">
+                <p class="text-base">&copy; <span id="current-year"></span> <span data-translate-key="company_brand_name">达普韦伯</span> (DappWeb.cn). <span data-translate-key="footer_copyright_part2">保留所有权利.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // --- Translations Data ---
+        const translations = {
+            'zh': {
+                company_brand_name: "达普韦伯", hero_subtitle_part2: "您值得信赖的全球技术伙伴，总部位于西安，提供交易所、DApp、GameFi、AI 服务、DeFi、NFT 市场、公链、Layer 2、钱包及可信数据空间等专业定制开发服务。探索我们的<a href='/blog/' class='text-indigo-200 hover:text-white underline font-medium'>博客资讯</a>获取最新行业洞察。", footer_company_name: "西安达普韦伯网络科技有限责任公司", footer_copyright_part2: "保留所有权利.", page_title: "达普韦伯 - 领先的区块链、AI与可信数据解决方案提供商 | 博客资讯", nav_services: "核心服务", nav_portfolio: "成功案例", nav_cooperation: "合作平台", nav_partners: "合作伙伴", nav_blog: "博客资讯", nav_follow_us: "关注我们", nav_about: "关于我们", nav_contact: "联系我们", sr_open_menu: "打开主菜单", current_lang_text: "中文", hero_title: "构建下一代区块链、AI 与可信数据应用", hero_cta1: "获取专属方案", hero_cta2: "了解更多服务", services_title: "我们的核心服务", services_subtitle: "提供全方位的区块链、Web3、AI 及可信数据软件开发与定制服务", service_exchange_title: "交易所软件开发", service_exchange_desc: "安全、高效、可扩展的中心化及去中心化 (DEX) 交易所系统定制。", service_dapp_title: "DApp 开发", service_dapp_desc: "基于主流公链 (ETH, BSC, Solana, Kinachain 等) 的去中心化应用开发。", service_gamefi_title: "GameFi 开发", service_gamefi_desc: "融合游戏与金融，打造引人入胜的 Play-to-Earn 及各类链游。", service_quant_title: "量化交易系统", service_quant_desc: "开发定制化的数字资产量化交易策略、机器人与跟单系统。", service_defi_title: "DeFi 解决方案", service_defi_desc: "构建去中心化金融协议，如借贷、DEX、流动性挖矿、RWA 等。", service_nft_title: "NFT 市场开发", service_nft_desc: "开发功能丰富的 NFT 发行、交易、拍卖、展示平台 (基于 ERC721/1155)。", service_chain_title: "公链与联盟链", service_chain_desc: "提供公链节点部署、联盟链 (如自研 Kinachain) 搭建与运维服务。", service_layer2_title: "Layer 2 解决方案", service_layer2_desc: "基于 Rollups (Optimistic, ZK) 等技术提供扩容方案设计与开发。", service_wallet_title: "数字钱包开发", service_wallet_desc: "开发安全易用的 Web3 钱包 (浏览器插件、移动 App)，支持多链。", service_data_space_title: "可信数据空间", service_data_space_desc: "构建基于隐私计算和区块链技术的数据安全共享与协作环境。", service_ai_title: "人工智能服务", service_ai_desc: "提供基于可信数据和 Web3 架构的 AI 模型训练、部署与应用服务，专注个性化、强隐私 (如独立记忆体) 和可解释的智能解决方案。", service_data_trading_title: "数据交易系统", service_data_trading_desc: "开发安全合规的数据要素流通平台 (如 \"数易通\")，集成 AI 智能匹配与评估。", why_us_badge: "我们的优势", why_us_title: "为什么选择达普韦伯？", why_us_subtitle: "我们立足西安，服务全球，致力于提供顶尖的区块链、AI 与可信数据技术解决方案。", advantage_global_title: "全球化服务能力", advantage_global_desc: "服务覆盖全球，支持中、英、日、韩多语言沟通与交付，深刻理解不同市场需求。", advantage_team_title: "专业技术团队", advantage_team_desc: "拥有经验丰富的区块链工程师、AI 专家、产品经理和设计师，精通各类前沿技术栈。", advantage_custom_title: "高度定制化方案", advantage_custom_desc: "根据您的具体业务场景和目标，量身定制最合适的区块链、Web3 及 AI 解决方案。", advantage_support_title: "全流程支持", advantage_support_desc: "从需求分析、方案设计、技术开发到测试部署、上线运维，提供端到端的专业服务。", advantage_tech_title: "自主核心技术", advantage_tech_desc: "拥有自主研发的基纳链 (Kinachain) 联盟链、元话数字资产 SaaS 系统等核心技术资产。", advantage_location_title: "立足创新高地", advantage_location_desc: "总部位于中国西安，充分利用区域科技创新优势，辐射全球市场。", portfolio_title: "成功案例", portfolio_subtitle: "我们与众多客户共同实现的卓越成果 (部分示例)", case_shandong_title: "山东文保 - 文博数字资产平台", case_shandong_type: "服务类型：联盟链 (Kinachain) 应用", case_gongjiang_title: "宫匠数藏 - 数字资产交易平台", case_gongjiang_type: "服务类型：NFT Marketplace 开发", case_shengguang_title: "省广数藏 - 平台及联盟链服务", case_shengguang_type: "服务类型：NFT Marketplace + 联盟链", portfolio_view_all: "查看更多案例 &rarr;", cooperation_title: "合作运营平台", cooperation_subtitle: "我们深度参与运营的前沿 Web3.0 与 AI 应用", coop_moshanspace_title: "墨山域元空间", coop_moshanspace_desc: "全球首款基于 Web3.0 的个人数据 AI 处理器与分布式存储服务。", coop_highlights: "核心亮点:", coop_moshanspace_highlights: "Web3.0 分布式存储, 小墨 AI (个性化、强隐私), 参与标准制定。", coop_role: "达普韦伯角色:", coop_moshanspace_role: "提供核心 Web3.0 底层技术与 AI 能力支持。", coop_visit_website: "访问官网 &rarr;", coop_metakina_title: "元话 RWA", coop_metakina_desc: "构建现实资产与数字金融的合规桥梁，提供机构级 RWA 代币化一站式解决方案。", coop_metakina_services: "端到端 RWA 方案, 合规跨境专家, 多元资产支持。", coop_metakina_role: "核心技术研发伙伴与服务商。", partners_title: "技术与生态伙伴", partners_subtitle: "携手全球领先的 Web3 与技术平台，共建繁荣生态", blog_title: "博客资讯 & 深度洞察", blog_subtitle: "来自达普韦伯团队的前沿分析与技术分享 (内容源自 <a href='/blog/' class='text-indigo-600 hover:text-indigo-800 font-medium'>我们的博客</a>)", tag_blockchain: "区块链", tag_tech: "技术分析", tag_ai: "人工智能", tag_web3: "Web3", tag_defi: "DeFi", tag_rwa: "RWA", blog1_title: "Layer 2 扩容方案最新进展与未来趋势", blog1_excerpt: "深入探讨 ZK-Rollups 与 Optimistic Rollups 的技术演进、应用场景及面临的挑战...", blog2_title: "Web3 与 AI 融合：构建可信智能应用的机遇", blog2_excerpt: "分析区块链如何为 AI 提供可信数据源和计算环境，以及 AI 如何增强 DApp 功能...", blog3_title: "RWA 代币化：连接现实世界资产与 DeFi 的桥梁", blog3_excerpt: "探讨房地产、债券等真实世界资产如何通过代币化进入 DeFi 生态，释放流动性...", read_more: "阅读全文 &rarr;", blog_view_all: "访问博客获取更多资讯", social_title: "关注我们 & 公司要闻", social_subtitle: "在社交媒体上关注达普韦伯，获取最新的公司公告、活动信息、技术更新。重要新闻也会发布在<a href='/blog/category/news/' class='text-indigo-600 hover:text-indigo-800 font-medium'>博客的公司新闻</a>栏目。", social_wechat: "微信公众号", news_title: "近期要闻", news1_title: "达普韦伯荣获“年度区块链创新企业”奖项", news1_excerpt: "在 XXX 峰会上，达普韦伯凭借其在可信数据和 AI 领域的突破获得认可...", news2_title: "基纳链 (Kinachain) 完成新一轮战略升级", news2_excerpt: "本次升级显著提升了 TPS 并优化了对 AI 驱动型智能合约的支持...", news_view_all: "查看所有公司新闻 &rarr;", about_title: "关于我们", about_intro: "西安达普韦伯网络科技有限责任公司 (达普韦伯) 是一家领先的区块链技术服务专家、可信数据空间构建者、数据交易系统开发者及人工智能应用服务商。我们立足于中国西安这一科技创新高地，面向全球客户提供服务。", about_mission_vision: "我们的使命是“<strong class='font-semibold text-indigo-600'>技术重塑信任，数据赋能未来</strong>”，致力于成为全球领先的可信数据流通基础设施与服务提供商。我们坚守“<strong class='font-semibold'>诚信、创新、协作、共赢</strong>”的核心价值观，驱动每一次合作与创新。", about_experience: "凭借丰富的行业经验，我们已累计服务国内外客户超过 200 家。我们自主研发并运营专注于数字资产领域的<strong class='font-semibold'>基纳链 (Kinachain) 联盟链</strong>，并合作运营“墨山域元空间”、“元话 RWA”等前沿 Web3.0 应用，在 DApp 开发、可信数据、人工智能应用及数字资产解决方案领域积累了深厚的实践经验。", about_commitment: "<span data-translate-key=\"company_brand_name\">达普韦伯</span>致力于通过先进的技术和专业的服务，帮助客户在 Web3 和数据要素化的时代浪潮中把握机遇，实现价值增长。", contact_title: "准备好启动您的区块链或 AI 项目了吗？", contact_subtitle: "联系我们的专家团队，获取免费咨询和项目评估，共同探索数据要素、数字资产与人工智能的无限可能！", contact_cta: "立即联系我们 (contact@dappweb.cn)", footer_services_title: "核心服务", footer_service_exchange: "交易所开发", footer_service_dapp: "DApp 开发", footer_service_gamefi: "GameFi 开发", footer_service_nft: "NFT 市场", footer_service_chain: "公链/联盟链", footer_service_layer2: "Layer 2 方案", footer_service_wallet: "数字钱包", footer_service_data_space: "可信数据空间", footer_service_ai: "AI 服务", footer_company_title: "公司信息", footer_about: "关于达普韦伯", footer_blog: "博客资讯", footer_news: "公司新闻", footer_careers: "加入我们", footer_contact: "联系方式", footer_resources_title: "资源与支持", footer_help: "帮助中心", footer_privacy: "隐私政策", footer_terms: "服务条款", footer_follow_title: "关注我们", footer_address: "总部：中国·西安"
+            },
+            'en': {
+                company_brand_name: "DappWeb", hero_subtitle_part2: "Your trusted global technology partner, headquartered in Xi'an, providing expert custom development for Exchanges, DApps, GameFi, AI Services, DeFi, NFT Marketplaces, Public Chains, Layer 2, Wallets, and Trusted Data Spaces. Explore our <a href='/blog/' class='text-indigo-200 hover:text-white underline font-medium'>Blog</a> for the latest industry insights.", footer_company_name: "Xi'an DappWeb Network Technology Co., Ltd.", footer_copyright_part2: "All Rights Reserved.", page_title: "DappWeb - Leading Blockchain, AI & Trusted Data Solutions Provider | Blog", nav_services: "Services", nav_portfolio: "Portfolio", nav_cooperation: "Platforms", nav_partners: "Partners", nav_blog: "Blog", nav_follow_us: "Follow Us", nav_about: "About Us", nav_contact: "Contact", sr_open_menu: "Open main menu", current_lang_text: "English", hero_title: "Building Next-Gen Blockchain, AI & Trusted Data Applications", hero_cta1: "Get Custom Solution", hero_cta2: "Explore Services", services_title: "Our Core Services", services_subtitle: "Providing comprehensive development and customization services for Blockchain, Web3, AI, and Trusted Data software.", service_exchange_title: "Exchange Software Development", service_exchange_desc: "Secure, efficient, and scalable custom development for centralized and decentralized (DEX) exchange systems.", service_dapp_title: "DApp Development", service_dapp_desc: "Decentralized application development on mainstream public chains (ETH, BSC, Solana, Kinachain, etc.).", service_gamefi_title: "GameFi Development", service_gamefi_desc: "Integrating gaming and finance to create engaging Play-to-Earn and various blockchain games.", service_quant_title: "Quantitative Trading Systems", service_quant_desc: "Developing customized digital asset quantitative trading strategies, bots, and copy trading systems.", service_defi_title: "DeFi Solutions", service_defi_desc: "Building decentralized finance protocols such as lending, DEX, yield farming, RWA, etc.", service_nft_title: "NFT Marketplace Development", service_nft_desc: "Developing feature-rich platforms for NFT issuance, trading, auction, and display (based on ERC721/1155).", service_chain_title: "Public & Consortium Chains", service_chain_desc: "Providing public chain node deployment, consortium chain (like proprietary Kinachain) setup and maintenance services.", service_layer2_title: "Layer 2 Solutions", service_layer2_desc: "Offering scaling solution design and development based on technologies like Rollups (Optimistic, ZK).", service_wallet_title: "Digital Wallet Development", service_wallet_desc: "Developing secure and user-friendly Web3 wallets (browser extensions, mobile apps) with multi-chain support.", service_data_space_title: "Trusted Data Space", service_data_space_desc: "Building secure data sharing and collaboration environments based on privacy computing and blockchain technology.", service_ai_title: "Artificial Intelligence Services", service_ai_desc: "Providing AI model training, deployment, and application services based on trusted data and Web3 architecture, focusing on personalized, privacy-preserving (e.g., independent memory), and explainable intelligent solutions.", service_data_trading_title: "Data Trading Systems", service_data_trading_desc: "Developing secure and compliant data element circulation platforms (like \"DapuTrade Engine\"), integrated with AI smart matching and valuation.", why_us_badge: "Our Advantages", why_us_title: "Why Choose DappWeb?", why_us_subtitle: "Based in Xi'an, serving globally, we are committed to providing top-tier Blockchain, AI, and Trusted Data technology solutions.", advantage_global_title: "Global Service Capability", advantage_global_desc: "Serving clients worldwide, supporting multi-language communication (Chinese, English, Japanese, Korean) and delivery, with a deep understanding of diverse market needs.", advantage_team_title: "Professional Technical Team", advantage_team_desc: "Experienced blockchain engineers, AI experts, product managers, and designers proficient in various cutting-edge technology stacks.", advantage_custom_title: "Highly Customized Solutions", advantage_custom_desc: "Tailoring the most suitable Blockchain, Web3, and AI solutions according to your specific business scenarios and goals.", advantage_support_title: "End-to-End Support", advantage_support_desc: "Providing comprehensive professional services from requirement analysis, solution design, technical development to testing, deployment, and post-launch maintenance.", advantage_tech_title: "Proprietary Core Technology", advantage_tech_desc: "Possessing proprietary intellectual property assets like the Kinachain consortium chain and Metakina digital asset SaaS system.", advantage_location_title: "Based in Innovation Hub", advantage_location_desc: "Headquartered in Xi'an, China, leveraging regional technological innovation advantages to serve the global market.", portfolio_title: "Success Cases", portfolio_subtitle: "Showcasing the outstanding results achieved together with our clients (Selected Examples)", case_shandong_title: "Shandong Cultural Relics - Digital Asset Platform", case_shandong_type: "Service Type: Consortium Chain (Kinachain) Application", case_gongjiang_title: "Gongjiang Digital Collectibles - Trading Platform", case_gongjiang_type: "Service Type: NFT Marketplace Development", case_shengguang_title: "Shengguang Digital Collectibles - Platform & Chain Service", case_shengguang_type: "Service Type: NFT Marketplace + Consortium Chain", portfolio_view_all: "View More Cases &rarr;", cooperation_title: "Co-operated Platforms", cooperation_subtitle: "Pioneering Web3.0 and AI applications we are deeply involved in operating.", coop_moshanspace_title: "Moshanspace Metaverse", coop_moshanspace_desc: "The world's first personal data AI processor and distributed storage service based on Web3.0.", coop_highlights: "Core Highlights:", coop_moshanspace_highlights: "Web3.0 distributed storage, XiaoMo AI (personalized, strong privacy), standard participation.", coop_role: "DappWeb Role:", coop_moshanspace_role: "Providing core Web3.0 underlying technology and AI capability support.", coop_visit_website: "Visit Website &rarr;", coop_metakina_title: "Metakina RWA", coop_metakina_desc: "Building a compliant bridge between real-world assets and digital finance, offering institutional-grade RWA tokenization solutions.", coop_metakina_services: "End-to-end RWA solutions, cross-border compliance expertise, multi-asset support.", coop_metakina_role: "Core technology R&D partner and service provider.", partners_title: "Technology & Ecosystem Partners", partners_subtitle: "Collaborating with leading global Web3 and technology platforms to build a thriving ecosystem.", blog_title: "Blog & Insights", blog_subtitle: "Cutting-edge analysis and technical sharing from the DappWeb team (Content from <a href='/blog/' class='text-indigo-600 hover:text-indigo-800 font-medium'>Our Blog</a>)", tag_blockchain: "Blockchain", tag_tech: "Tech Analysis", tag_ai: "AI", tag_web3: "Web3", tag_defi: "DeFi", tag_rwa: "RWA", blog1_title: "Latest Developments and Future Trends in Layer 2 Scaling Solutions", blog1_excerpt: "In-depth discussion on the technological evolution, application scenarios, and challenges of ZK-Rollups and Optimistic Rollups...", blog2_title: "Web3 & AI Integration: Opportunities for Building Trusted Intelligent Applications", blog2_excerpt: "Analyzing how blockchain can provide trusted data sources and computing environments for AI, and how AI enhances DApp functionality...", blog3_title: "RWA Tokenization: Bridging Real-World Assets with DeFi", blog3_excerpt: "Exploring how real-world assets like real estate and bonds can enter the DeFi ecosystem through tokenization, unlocking liquidity...", read_more: "Read More &rarr;", blog_view_all: "Visit Blog for More Insights", social_title: "Follow Us & Company News", social_subtitle: "Follow DappWeb on social media for the latest company announcements, events, and tech updates. Major news is also posted in the <a href='/blog/category/news/' class='text-indigo-600 hover:text-indigo-800 font-medium'>Company News section</a> of our blog.", social_wechat: "WeChat Official", news_title: "Recent News", news1_title: "DappWeb Wins 'Blockchain Innovator of the Year' Award", news1_excerpt: "At the XXX Summit, DappWeb was recognized for its breakthroughs in trusted data and AI...", news2_title: "Kinachain Completes New Round of Strategic Upgrade", news2_excerpt: "This upgrade significantly improves TPS and enhances support for AI-driven smart contracts...", news_view_all: "View All Company News &rarr;", about_title: "About Us", about_intro: "Xi'an DappWeb Network Technology Co., Ltd. (DappWeb) is a leading blockchain technology service expert, trusted data space builder, data trading system developer, and artificial intelligence application service provider. Based in the technological innovation hub of Xi'an, China, we serve clients globally.", about_mission_vision: "Our mission is '<strong class=\"font-semibold text-indigo-600\">Reshaping Trust with Technology, Empowering the Future with Data</strong>', striving to become the world's leading provider of trusted data circulation infrastructure and services. We adhere to the core values of '<strong class=\"font-semibold\">Integrity, Innovation, Collaboration, Win-Win</strong>' to drive every partnership and innovation.", about_experience: "With extensive industry experience, we have served over 200 domestic and international clients. We independently developed and operate the <strong class=\"font-semibold\">Kinachain consortium chain</strong>, focusing on digital asset infrastructure, and co-operate cutting-edge Web3.0 applications like 'Moshanspace Metaverse' and 'Metakina RWA'. We have accumulated deep practical experience in DApp development, trusted data, AI applications, and digital asset solutions.", about_commitment: "<span data-translate-key=\"company_brand_name\">DappWeb</span> is committed to helping clients seize opportunities and achieve value growth in the era of Web3 and data elementization through advanced technology and professional services.", contact_title: "Ready to Start Your Blockchain or AI Project?", contact_subtitle: "Contact our expert team for a free consultation and project assessment. Let's explore the infinite possibilities of data elements, digital assets, and artificial intelligence together!", contact_cta: "Contact Us Now (contact@dappweb.cn)", footer_services_title: "Core Services", footer_service_exchange: "Exchange Development", footer_service_dapp: "DApp Development", footer_service_gamefi: "GameFi Development", footer_service_nft: "NFT Marketplace", footer_service_chain: "Public/Consortium Chain", footer_service_layer2: "Layer 2 Solutions", footer_service_wallet: "Digital Wallet", footer_service_data_space: "Trusted Data Space", footer_service_ai: "AI Services", footer_company_title: "Company", footer_about: "About DappWeb", footer_blog: "Blog & Insights", footer_news: "Company News", footer_careers: "Careers", footer_contact: "Contact", footer_resources_title: "Resources & Support", footer_help: "Help Center", footer_privacy: "Privacy Policy", footer_terms: "Terms of Service", footer_follow_title: "Follow Us", footer_address: "Headquarters: Xi'an, China"
+            },
+            'ja': {
+                company_brand_name: "DappWeb", hero_subtitle_part2: "信頼できるグローバル技術パートナー。西安に本社を置き、取引所、DApp、GameFi、AIサービス、DeFi、NFTマーケットプレイス、パブリックチェーン、Layer 2、ウォレット、信頼できるデータスペースなどの専門的なカスタム開発サービスを提供します。最新の業界洞察については、<a href='/blog/' class='text-indigo-200 hover:text-white underline font-medium'>ブログ</a>をご覧ください。", footer_company_name: "西安達普韋伯網絡科技有限公司", footer_copyright_part2: "全著作権所有.", page_title: "DappWeb - ブロックチェーン、AI、信頼できるデータソリューション | ブログ", current_lang_text: "日本語", nav_services: "サービス", nav_portfolio: "実績", nav_cooperation: "協力プラットフォーム", nav_partners: "パートナー", nav_blog: "ブログ", nav_follow_us: "フォローする", nav_about: "会社概要", nav_contact: "お問い合わせ", hero_title: "次世代ブロックチェーン、AI、信頼できるデータアプリケーションの構築", hero_cta1: "カスタムソリューションを入手", hero_cta2: "サービスを見る", about_title: "私たちについて", about_intro: "西安達普韋伯網絡科技有限公司（DappWeb）は、主要なブロックチェーン技術サービス専門家、信頼できるデータスペース構築者、データ取引システム開発者、および人工知能アプリケーションサービスプロバイダーです。中国西安の技術革新拠点に拠点を置き、グローバルな顧客にサービスを提供しています。", about_mission_vision: "私たちの使命は「<strong class='font-semibold text-indigo-600'>技術で信頼を再構築し、データで未来を力づける</strong>」ことであり、信頼できるデータ流通インフラストラクチャおよびサービスのグローバルリーダーになることを目指しています。「<strong class='font-semibold'>誠実、革新、協力、共栄</strong>」というコアバリューを守り、すべての協力と革新を推進します。", about_experience: "豊富な業界経験により、国内外で200社以上の顧客にサービスを提供してきました。デジタル資産分野に特化した<strong class='font-semibold'>キナチェーン（Kinachain）コンソーシアムチェーン</strong>を独自に開発・運営し、「墨山域メタバース」、「元話RWA」などの最先端Web3.0アプリケーションを共同運営しています。DApp開発、信頼できるデータ、AIアプリケーション、デジタル資産ソリューションの分野で深い実践経験を蓄積してきました。", about_commitment: "<span data-translate-key=\"company_brand_name\">DappWeb</span>は、先進技術と専門サービスを通じて、お客様がWeb3とデータ要素化時代の波の中で機会を捉え、価値成長を実現できるよう支援することに尽力しています。", read_more: "続きを読む &rarr;"
+                 // ... (rest of the Japanese translations)
+            },
+            'ko': {
+                company_brand_name: "DappWeb", hero_subtitle_part2: "신뢰할 수 있는 글로벌 기술 파트너. 시안에 본사를 두고 거래소, DApp, GameFi, AI 서비스, DeFi, NFT 마켓플레이스, 퍼블릭 체인, Layer 2, 지갑 및 신뢰할 수 있는 데이터 공간 등에 대한 전문 맞춤 개발 서비스를 제공합니다. 최신 업계 통찰력은 <a href='/blog/' class='text-indigo-200 hover:text-white underline font-medium'>블로그</a>를 참조하십시오.", footer_company_name: "시안 다푸웨버 네트워크 기술 유한회사", footer_copyright_part2: "모든 권리 보유.", page_title: "DappWeb - 선도적인 블록체인, AI 및 신뢰할 수 있는 데이터 솔루션 제공업체 | 블로그", current_lang_text: "한국어", nav_services: "서비스", nav_portfolio: "포트폴리오", nav_cooperation: "협력 플랫폼", nav_partners: "파트너", nav_blog: "블로그", nav_follow_us: "팔로우하기", nav_about: "회사 소개", nav_contact: "문의하기", hero_title: "차세대 블록체인, AI 및 신뢰할 수 있는 데이터 애플리케이션 구축", hero_cta1: "맞춤 솔루션 받기", hero_cta2: "서비스 살펴보기", about_title: "회사 소개", about_intro: "시안 다푸웨버 네트워크 기술 유한회사(DappWeb)는 선도적인 블록체인 기술 서비스 전문가, 신뢰할 수 있는 데이터 공간 구축자, 데이터 거래 시스템 개발자 및 인공지능 애플리케이션 서비스 제공업체입니다. 중국 시안의 기술 혁신 허브에 기반을 두고 전 세계 고객에게 서비스를 제공합니다.", about_mission_vision: "우리의 사명은 '<strong class='font-semibold text-indigo-600'>기술로 신뢰를 재구성하고 데이터로 미래를 강화하는 것</strong>'이며, 신뢰할 수 있는 데이터 유통 인프라 및 서비스 분야의 글로벌 리더가 되는 것을 목표로 합니다. 우리는 '<strong class='font-semibold'>성실, 혁신, 협력, 상생</strong>'이라는 핵심 가치를 준수하여 모든 협력과 혁신을 추진합니다.", about_experience: "풍부한 업계 경험을 바탕으로 국내외 200개 이상의 고객에게 서비스를 제공했습니다. 디지털 자산 분야에 특화된 <strong class='font-semibold'>키나체인(Kinachain) 컨소시엄 체인</strong>을 자체 개발 및 운영하고 있으며, '모산스페이스 메타버스', '메타키나 RWA'와 같은 최첨단 Web3.0 애플리케이션을 공동 운영합니다. DApp 개발, 신뢰할 수 있는 데이터, AI 애플리케이션 및 디지털 자산 솔루션 분야에서 깊은 실무 경험을 축적했습니다.", about_commitment: "<span data-translate-key=\"company_brand_name\">DappWeb</span>은 첨단 기술과 전문 서비스를 통해 고객이 Web3 및 데이터 요소화 시대의 흐름 속에서 기회를 포착하고 가치 성장을 실현할 수 있도록 돕는 데 전념하고 있습니다.", read_more: "더 읽기 &rarr;"
+                 // ... (rest of the Korean translations)
+            }
+        };
+
+        // --- Language Switching Logic ---
+        const supportedLanguages = [ { code: 'zh', name: '中文' }, { code: 'en', name: 'English' }, { code: 'ja', name: '日本語' }, { code: 'ko', name: '한국어' } ];
+        const languageSwitcherButton = document.getElementById('language-switcher-button');
+        const languageDropdownMenu = document.getElementById('language-dropdown-menu');
+        const currentLangTextElement = document.getElementById('current-lang-text');
+        const htmlElement = document.documentElement;
+        let currentLang = localStorage.getItem('preferredLang') || 'zh';
+
+        function setLanguage(langCode) {
+            if (!translations[langCode]) { console.warn(`Language ${langCode} not supported.`); langCode = 'zh'; }
+            currentLang = langCode;
+            localStorage.setItem('preferredLang', langCode);
+            htmlElement.lang = langCode;
+            const langData = translations[langCode];
+            const defaultLangData = translations['zh'];
+            document.title = langData.page_title || defaultLangData.page_title;
+            document.querySelectorAll('[data-translate-key]').forEach(element => {
+                const key = element.getAttribute('data-translate-key');
+                const translation = langData[key] || defaultLangData[key];
+                if (translation !== undefined) {
+                     if (key.includes('subtitle') || key.includes('mission_vision') || key.includes('experience') || key.includes('commitment') || key.includes('placeholder') || key.includes('copyright') || key === 'company_brand_name' || key === 'about_intro') {
+                         element.innerHTML = translation;
+                    } else { element.innerText = translation; }
+                } else { console.warn(`Translation key "${key}" not found in language "${langCode}" or default.`); }
+            });
+            const currentLangInfo = supportedLanguages.find(l => l.code === langCode);
+            if (currentLangInfo && currentLangTextElement) { currentLangTextElement.innerText = currentLangInfo.name; }
+            populateLanguageDropdown();
+            languageDropdownMenu.classList.remove('active');
+        }
+
+        function populateLanguageDropdown() {
+            languageDropdownMenu.innerHTML = '';
+            supportedLanguages.forEach(lang => {
+                const link = document.createElement('a');
+                link.href = '#'; link.innerText = lang.name; link.dataset.lang = lang.code;
+                if (lang.code === currentLang) { link.classList.add('selected'); }
+                link.addEventListener('click', (e) => { e.preventDefault(); setLanguage(lang.code); });
+                languageDropdownMenu.appendChild(link);
+            });
+        }
+        languageSwitcherButton.addEventListener('click', (e) => { e.stopPropagation(); languageDropdownMenu.classList.toggle('active'); });
+        document.addEventListener('click', (e) => { if (!languageSwitcherButton.contains(e.target) && !languageDropdownMenu.contains(e.target)) { languageDropdownMenu.classList.remove('active'); } });
+
+        // --- Mobile Menu Logic ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIconOpen = mobileMenuButton.querySelector('svg.block');
+        const menuIconClose = mobileMenuButton.querySelector('svg.hidden');
+        const mobileMenuLinks = mobileMenu.querySelectorAll('.mobile-menu-link');
+        mobileMenuButton.addEventListener('click', () => {
+            const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+            mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+            mobileMenu.classList.toggle('hidden');
+            menuIconOpen.classList.toggle('hidden');
+            menuIconClose.classList.toggle('hidden');
+        });
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                 const href = link.getAttribute('href');
+                 if (href && (href.startsWith('#') || href.startsWith('/#'))) { if (!mobileMenu.classList.contains('hidden')) { mobileMenuButton.click(); } }
+            });
+        });
+
+        // --- Smooth Scrolling Logic ---
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href === '#') return;
+                try {
+                    const targetElement = document.querySelector(href);
+                    if (targetElement) {
+                        e.preventDefault();
+                        const navbarHeight = document.querySelector('nav').offsetHeight || 64;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+                        window.scrollTo({ top: offsetPosition, behavior: "smooth" });
+                    }
+                } catch (error) { console.error(`Error finding element for selector: ${href}`, error); }
+            });
+        });
+
+        // --- Initial Setup ---
+        document.addEventListener('DOMContentLoaded', () => {
+            setLanguage(currentLang);
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+        });
+    </script>
+
+</body>
+</html>
